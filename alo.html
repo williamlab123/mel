@@ -1,74 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Carousel</title>
-  <style>
-    .carousel-container {
-      width: 500px;
-      height: 400px;
-      margin: 50px auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-    
-    .carousel-container img {
-      width: 50%;
-      height: 50%;
-    }
-    
-    .prev,
-    .next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      cursor: pointer;
-      font-size: 36px;
-      color: #fff;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 10px 20px;
-      border-radius: 50%;
-    }
-    
-    .prev {
-      left: 10px;
-    }
-    
-    .next {
-      right: 10px;
-    }
-  </style>
-</head>
-<body>
-  <div class="carousel-container">
-    <img id="current-slide" src="F:/programas/mel/imgs/Screenshot_1.png" alt="">
-    <button class="prev" onclick="prevSlide()">&lt;</button>
-    <button class="next" onclick="nextSlide()">&gt;</button>
-  </div>
-  
-  <script>
-    const images = ['imgs/Screenshot_1.png', 'imgs/Screenshot_2.png', 'imgs/Screenshot_3.png'];
-    const currentSlide = document.querySelector('#current-slide');
-    let currentIndex = 0;
-    
-    function prevSlide() {
-      currentIndex--;
-      if (currentIndex < 0) {
-        currentIndex = images.length - 1;
+<html>
+  <head>
+    <style>
+      .carousel {
+        width: 300px;
+        height: 200px;
+        overflow: hidden;
+        margin: 0 auto;
       }
-      currentSlide.src = images[currentIndex];
-    }
-    
-    function nextSlide() {
-      currentIndex++;
-      if (currentIndex === images.length) {
-        currentIndex = 0;
+
+      .slides {
+        display: flex;
+        position: relative;
       }
-      currentSlide.src = images[currentIndex];
-    }
-  </script>
-</body>
+
+      .slide {
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 1s;
+      }
+
+      .active {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <div class="slides">
+        <div class="slide active">
+          <img src="./imgs/Screenshot_1.png" width="200px" height="200px" alt="Image 1">
+        </div>
+        <div class="slide">
+          <img src="./imgs/Screenshot_2.png" width="200px" height="200px" alt="Image 2">
+        </div>
+        <div class="slide">
+          <img src="./imgs/Screenshot_3.png" width="200px" height="200px" alt="Image 3">
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const slides = document.querySelectorAll('.slide');
+      let index = 0;
+
+      function changeSlide() {
+        slides.forEach((slide) => {
+          slide.classList.remove('active');
+        });
+
+        slides[index].classList.add('active');
+
+        if (index === slides.length - 1) {
+          index = 0;
+        } else {
+          index++;
+        }
+      }
+
+      setInterval(changeSlide, 4000);
+    </script>
+  </body>
 </html>

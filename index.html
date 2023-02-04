@@ -1,131 +1,155 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5919850764317455"
-     crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-     <script src="./index.js"></script>
-    <link rel="stylesheet" href="./style.css">
-    <style>
-        .carousel-container
-         {
-          width: 500px;
-          height: 400px;
-          margin: 50px auto;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: relative;
-        }
-        
-        .carousel-container img {
-          width: 50%;
-          height: 50%;
-        }
-        
-        .prev,
-        .next {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          cursor: pointer;
-          font-size: 36px;
-          color: #fff;
-          background-color: rgba(0, 0, 0, 0.5);
-          padding: 10px 20px;
-          border-radius: 50%;
-        }
-        
-        .prev {
-          left: 10px;
-        }
-        
-        .next {
-          right: 10px;
-        }
-      </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="./imgs/favicon.ico"">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5919850764317455"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./index.js"></script>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    .carousel-container 
+    {
+
+      width: 500px;
+      height: 400px;
+      margin: 50px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .carousel
+      {
+        text-align: center;
+      align-items: center;
+      justify-content: center;
     
-    <script src="./index.js"></script>
+     
+      }
+
+    .carousel-container img {
+
+      width: 50%;
+      height: 50%;
+    }
+
+    .prev,
+    .next {
+
+      margin-left: 20%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 36px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 50%;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+  </style>
+
+  <script src="./index.js"></script>
 
 
 
-    <title>Apiário Santa Rita</title>
+  <title>Apiário Santa Rita</title>
 </head>
+
 <body>
-    <img id="logo" src="./imgs/Screenshot_1.png" alt="Logo site" width="200px" height="200px">
+  <img id="logo" src="./imgs/Screenshot_1.png" alt="Logo site" width="200px" height="200px">
 
 
 
 
 
-    <div id="side-menu">
-        <ul id="lista">
-          <li><a href="./sobre.html">Sobre</a></li>
-          <li><a href="./contato.html">Contato</a></li>
-          <li><a href="https://www.mercadolivre.com.br/">Onde Comprar</a></li>
-        </ul>
-      </div>
+  <div id="side-menu">
+    <ul id="lista">
+      <li><a href="./sobre.html">Sobre</a></li>
+      <li><a href="./contato.html">Contato</a></li>
+      <li><a href="https://www.mercadolivre.com.br/">Onde Comprar</a></li>
+    </ul>
+  </div>
 
-    <div id="div1">
+  <div id="div1">
 
-        <p id="texto1"> O Apiário Santa Rita está localizado em São Simão, SP
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident unde, perferendis maiores vol
-            uptatum saepe quasi veniam harum deleniti in. Corporis,
-             suscipit tempora labore odio debitis sapiente. Necessitatibus veritatis ducimus nulla!
-        </p>
+    <p id="texto1"> O Apiário Santa Rita está localizado em São Simão, SP
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident unde, perferendis maiores vol
+      uptatum saepe quasi veniam harum deleniti in. Corporis,
+      suscipit tempora labore odio debitis sapiente. Necessitatibus veritatis ducimus nulla!
+    </p>
 
-    </div>
+  </div>
 
-    <!-- <div class="slider">
+  <!-- <div class="slider">
         <div><img src="./imgs/Screenshot_1.png" alt="Image 1"></div>
         <div><img src="./imgs/Screenshot_2.png" alt="Image 2"></div>
         <div><img src="./imgs/Screenshot_3.png" alt="Image 3"></div>
       </div>
       -->
 
-      <div class="carousel-container">
-        <img id="current-slide" src="F:/programas/mel/imgs/Screenshot_1.png" alt="">
-        <button class="prev" onclick="prevSlide()">&lt;</button>
-        <button class="next" onclick="nextSlide()">&gt;</button>
+  <div class="carousel">
+    <div class="slides">
+      <div class="slide active">
+        <img src="./imgs/Screenshot_1.png" width="200px" height="200px" alt="Image 1">
       </div>
-        
-        
+      <div class="slide">
+        <img src="./imgs/Screenshot_2.png" width="200px" height="200px" alt="Image 2">
       </div>
-      <script>
-        const images = ['imgs/Screenshot_1.png', 'imgs/Screenshot_2.png', 'imgs/Screenshot_3.png'];
-        const currentSlide = document.querySelector('#current-slide');
-        let currentIndex = 0;
-        
-        function prevSlide() {
-          currentIndex--;
-          if (currentIndex < 0) {
-            currentIndex = images.length - 1;
-          }
-          currentSlide.src = images[currentIndex];
-        }
-        
-        function nextSlide() {
-          currentIndex++;
-          if (currentIndex === images.length) {
-            currentIndex = 0;
-          }
-          currentSlide.src = images[currentIndex];
-        }
+      <div class="slide">
+        <img src="./imgs/Screenshot_3.png" width="200px" height="200px" alt="Image 3">
+      </div>
+    </div>
+  </div>
 
-        document.addEventListener("mousemove", function(event) {
-    if (event.clientX > window.innerWidth - 250) {
-      document.getElementById("side-menu").classList.add("open");
-    } else {
-      document.getElementById("side-menu").classList.remove("open");
+
+  </div>
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let index = 0;
+
+    function changeSlide() {
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+      });
+
+      slides[index].classList.add('active');
+
+      if (index === slides.length - 1) {
+        index = 0;
+      } else {
+        index++;
+      }
     }
-  });
-      </script>
-    
-    
+
+    setInterval(changeSlide, 4000);
+
+    document.addEventListener("mousemove", function (event) {
+      if (event.clientX > window.innerWidth - 250) {
+        document.getElementById("side-menu").classList.add("open");
+      } else {
+        document.getElementById("side-menu").classList.remove("open");
+      }
+    });
+  </script>
+
+
 </body>
+
 </html>
